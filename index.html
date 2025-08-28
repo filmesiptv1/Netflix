@@ -4,137 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dexx - Sua TV Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #1a1a1a;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        section {
-            padding: 20px;
-        }
-        .planos, .beneficios, .depoimentos {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; background: #121212; color: #fff; line-height: 1.6; }
+        header { background: #1f1f1f; padding: 20px; text-align: center; position: sticky; top: 0; z-index: 10; }
+        header h1 { font-size: 2rem; color: #ff4b2b; }
+        header p { margin-top: 5px; color: #ccc; }
+
+        nav { margin-top: 10px; }
+        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: 700; }
+        nav a:hover { color: #ff4b2b; }
+
+        section { padding: 50px 20px; }
+        h2 { text-align: center; margin-bottom: 30px; color: #ff4b2b; }
+
+        .planos, .beneficios, .depoimentos { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+
         .plano, .beneficio, .depoimento {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin: 10px;
-            padding: 20px;
-            width: 30%;
-            box-sizing: border-box;
+            background: #1f1f1f; border-radius: 15px; padding: 20px; width: 300px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: transform 0.3s, box-shadow 0.3s;
         }
-        .plano h3, .beneficio h3, .depoimento h3 {
-            color: #1a1a1a;
-        }
-        .plano p, .beneficio p, .depoimento p {
-            color: #666;
-        }
-        .cta {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .cta a {
-            background-color: #28a745;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        footer {
-            background-color: #1a1a1a;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
+        .plano:hover, .beneficio:hover, .depoimento:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.5); }
+
+        .plano h3, .beneficio h3, .depoimento h3 { color: #ff4b2b; margin-bottom: 10px; }
+        .plano p, .beneficio p, .depoimento p { color: #ccc; margin-bottom: 15px; }
+
+        .plano a, .cta a { display: inline-block; background: #ff4b2b; color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: background 0.3s; }
+        .plano a:hover, .cta a:hover { background: #ff6a4d; }
+
+        .cta { text-align: center; margin: 50px 0; }
+        .cta h2 { margin-bottom: 20px; }
+
+        footer { background: #1f1f1f; text-align: center; padding: 20px; margin-top: 50px; color: #ccc; }
+        footer a { color: #ff4b2b; text-decoration: none; font-weight: bold; }
+        footer a:hover { color: #ff6a4d; }
+
+        /* Imagens ilustrativas */
+        .beneficio img, .plano img { width: 100%; border-radius: 10px; margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Dexx - Sua TV Premium</h1>
-    <p>O Melhor do Entretenimento Sem Limites!</p>
+    <h1>Dexx</h1>
+    <p>Sua TV Premium com Filmes, Séries e Canais</p>
+    <nav>
+        <a href="#planos">Planos</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+    </nav>
 </header>
 
-<section>
-    <h2>Escolha o Plano Perfeito Para Você</h2>
+<section id="planos">
+    <h2>Planos Dexx</h2>
     <div class="planos">
         <div class="plano">
+            <img src="https://via.placeholder.com/300x150.png?text=1+Mês" alt="Plano 1 Mês">
             <h3>1 Mês</h3>
-            <p>R$ 20</p>
+            <p>R$ 20 - Acesso completo a todos os canais e apps de filmes.</p>
             <a href="https://t.me/dexxvendas" target="_blank">Assinar Agora</a>
         </div>
         <div class="plano">
+            <img src="https://via.placeholder.com/300x150.png?text=3+Meses" alt="Plano 3 Meses">
             <h3>3 Meses</h3>
-            <p>R$ 50</p>
+            <p>R$ 50 - Perfeito para curtir vários meses sem preocupações.</p>
             <a href="https://t.me/dexxvendas" target="_blank">Assinar Agora</a>
         </div>
         <div class="plano">
+            <img src="https://via.placeholder.com/300x150.png?text=12+Meses" alt="Plano 12 Meses">
             <h3>12 Meses</h3>
-            <p>R$ 150</p>
+            <p>R$ 150 - O melhor custo-benefício para o ano todo!</p>
             <a href="https://t.me/dexxvendas" target="_blank">Assinar Agora</a>
         </div>
     </div>
 </section>
 
-<section>
+<section id="beneficios">
     <h2>Benefícios da Dexx</h2>
     <div class="beneficios">
         <div class="beneficio">
-            <h3>Qualidade Impecável</h3>
-            <p>Transmissões em HD e Full HD para uma experiência visual superior.</p>
+            <img src="https://via.placeholder.com/300x150.png?text=HD" alt="Qualidade HD">
+            <h3>Qualidade HD e Full HD</h3>
+            <p>Assista seus canais e filmes favoritos com qualidade impecável.</p>
         </div>
         <div class="beneficio">
+            <img src="https://via.placeholder.com/300x150.png?text=Suporte" alt="Suporte 24h">
             <h3>Suporte 24h</h3>
-            <p>Equipe dedicada pronta para ajudar a qualquer momento.</p>
+            <p>Equipe pronta para te ajudar a qualquer hora, sem complicação.</p>
         </div>
         <div class="beneficio">
-            <h3>Conteúdo Atualizado</h3>
-            <p>Mais de 10.000 canais, filmes e séries sempre atualizados.</p>
+            <img src="https://via.placeholder.com/300x150.png?text=Atualizado" alt="Conteúdo Atualizado">
+            <h3>Conteúdo Sempre Atualizado</h3>
+            <p>Filmes, séries e canais constantemente renovados.</p>
         </div>
     </div>
 </section>
 
-<section>
+<section id="depoimentos">
     <h2>Depoimentos de Clientes</h2>
     <div class="depoimentos">
         <div class="depoimento">
             <h3>Maria S.</h3>
-            <p>"Qualidade impecável e suporte super atencioso. Super recomendo!"</p>
+            <p>"Dexx me surpreendeu! Qualidade incrível e suporte eficiente."</p>
         </div>
         <div class="depoimento">
             <h3>João P.</h3>
-            <p>"Variedade de canais e estabilidade. Minha família está amando!"</p>
+            <p>"Variedade enorme de canais e filmes, minha família ama!"</p>
         </div>
         <div class="depoimento">
             <h3>Ana C.</h3>
-            <p>"Atendimento excepcional e preço justo. Recomendo de olhos fechados!"</p>
+            <p>"Preço justo, atendimento rápido e excelente estabilidade."</p>
         </div>
     </div>
 </section>
 
-<section class="cta">
-    <h2>Teste Grátis por 24h!</h2>
-    <a href="https://t.me/dexxvendas" target="_blank">Fale Conosco no Telegram</a>
+<section class="cta" id="contato">
+    <h2>Fale Conosco Agora!</h2>
+    <a href="https://t.me/dexxvendas" target="_blank">Telegram Dexx</a>
 </section>
 
 <footer>
-    <p>&copy; 2025 Dexx - Todos os direitos reservados.</p>
+    <p>&copy; 2025 Dexx - Todos os direitos reservados. | <a href="https://t.me/dexxvendas" target="_blank">Contato Telegram</a></p>
 </footer>
 
 </body>
